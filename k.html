@@ -285,7 +285,7 @@
 
     <!-- HERO / BANNER -->
     <section class="ornamental p-6 relative">
-      <div class="flex items-start justify-between gap-4">
+      <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
         <!-- Left ornament (column with anchor/column look) -->
         <div class="hidden md:flex flex-col items-center gap-3 w-28">
           <div class="corner-orn">
@@ -307,8 +307,6 @@
 
           <!-- hero illustration area (use your illustration here) -->
           <div class="hero-illustration shadow-sm">
-            <!-- Replace this IMG src with your uploaded illustration (transparent PNG or high-res JPG).
-                 Example: <img src="assets/your-hero-illustration.png" alt="hero" class="max-w-full h-auto"> -->
             <img src="https://github.com/kaniratarigan3-blip/ecomm/blob/main/tema.jpg?raw=true" alt="hero" class="max-w-full h-auto rounded-lg">
           </div>
 
@@ -367,123 +365,155 @@
   });
 </script>
 
-
-
       <!-- bottom scallop lace -->
       <div class="mt-6 scallop"></div>
     </section>
 
-    <!-- PROMO CARDS (Stamp Collection style) -->
-    <section id="collections" class="mt-10">
-      <h2 class="text-xl md:text-2xl font-semibold mb-4">Collections — Choose Theme</h2>
+<!-- PROMO CARDS (Stamp Collection style) -->
+<section id="collections" class="mt-10">
+  <h2 class="text-xl md:text-2xl font-semibold mb-4">Collections — Choose Theme</h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- CARD 1: Laut -->
-        <div class="stamp p-4" id="card-sea">
-          <div class="perforation"></div>
-          <div class="perforation right"></div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-          <div class="flex items-start gap-4">
-            <div class="w-28 flex-shrink-0">
-              <div class="w-full h-28 rounded-md bg-gradient-to-br from-blue-50 to-[#D6E8FF] flex items-center justify-center overflow-hidden">
-                <!-- Replace with your sea illustration / mascot -->
-                <img id="card-sea-img" src="https://github.com/kaniratarigan3-blip/ecomm/blob/main/download20251102072934.png?raw=true" alt="sea" class="w-full h-full object-cover">
-              </div>
-            </div>
+    <!-- CARD TEMPLATE -->
+    <div class="stamp p-4" id="card-sea">
+      <div class="perforation"></div>
+      <div class="perforation right"></div>
 
-            <div class="flex-1">
-              <div class="flex items-center justify-between">
-                <div>
-                  <div class="label-ribbon">Theme</div>
-                  <h3 class="text-lg font-bold mt-2">Jellyfish Lagoon</h3>
-                </div>
-                <div class="text-sm text-muted">New</div>
-              </div>
+      <!-- MOBILE FIRST -->
+      <div class="flex flex-col sm:flex-row items-start gap-4">
 
-              <p class="mt-2 text-sm text-muted">Soft Artstyle — sea theme beads & soft coloring palette.</p>
-
-              <div class="mt-4 flex gap-2">
-                <!-- data-images: comma separated raw URLs (EDIT THIS with your preview images) -->
-                <button class="btn-vintage look-btn" data-theme="Jellyfish Lagoon" data-images="https://github.com/kaniratarigan3-blip/ecomm/blob/main/j1.jpg?raw=true,https://github.com/kaniratarigan3-blip/ecomm/blob/main/j2.jpg?raw=true,https://github.com/kaniratarigan3-blip/ecomm/blob/main/j3.jpg?raw=true">Look Collection</button>
-                <!-- Price button: data-price empty so you can fill later. Format for list: "Keychain: 35K; Strap: 30K; Sticker: 15K" -->
-                <button class="btn-vintage bg-white/90 border ml-1 price-btn" data-price="Rp. 15.000. - Rp. 25.000">Price</button>
-              </div>
-            </div>
+        <!-- IMAGE -->
+        <div class="w-full sm:w-28">
+          <div class="w-full h-40 sm:h-28 rounded-md bg-gradient-to-br from-blue-50 to-[#D6E8FF] flex items-center justify-center overflow-hidden">
+            <img src="https://github.com/kaniratarigan3-blip/ecomm/blob/main/download20251102072934.png?raw=true" 
+                 alt="sea" class="w-full h-full object-cover">
           </div>
         </div>
 
-        <!-- CARD 2: Buah -->
-        <div class="stamp p-4" id="card-fruit">
-          <div class="perforation"></div>
-          <div class="perforation right"></div>
+        <!-- CONTENT -->
+        <div class="flex-1 w-full">
 
-          <div class="flex items-start gap-4">
-            <div class="w-28 flex-shrink-0">
-              <div class="w-full h-28 rounded-md bg-gradient-to-br from-[#FFF1EB] to-[#FFEAF0] flex items-center justify-center overflow-hidden">
-                <img id="card-fruit-img" src="https://github.com/kaniratarigan3-blip/ecomm/blob/main/1563779_7pdMBl1K.png?raw=true" alt="fruit" class="w-full h-full object-cover">
-              </div>
+          <!-- LABEL + TITLE + BADGE -->
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+            <div>
+              <div class="label-ribbon">Theme</div>
+              <h3 class="text-lg font-bold mt-2">Jellyfish Lagoon</h3>
             </div>
 
-            <div class="flex-1">
-              <div class="flex items-center justify-between">
-                <div>
-                  <div class="label-ribbon">Theme</div>
-                  <h3 class="text-lg font-bold mt-2">Sweet Fruits</h3>
-                </div>
-                <div class="text-sm text-muted">Popular</div>
-              </div>
+            <div class="text-sm text-muted sm:ml-2">New</div>
+          </div>
 
-              <p class="mt-2 text-sm text-muted">Design fruit-themed: strawberry beads — warm and spring vibes.</p>
+          <p class="mt-2 text-sm text-muted">
+            Soft Artstyle — sea theme beads & soft coloring palette.
+          </p>
 
-              <div class="mt-4 flex gap-2">
-                <!-- example: multiple preview images separated by comma -->
-                <button class="btn-vintage look-btn" data-theme="Sweet Fruits" data-images="https://github.com/kaniratarigan3-blip/ecomm/blob/main/f1.jpg?raw=true,https://github.com/kaniratarigan3-blip/ecomm/blob/main/f2.jpg?raw=true,https://github.com/kaniratarigan3-blip/ecomm/blob/main/f3.jpg?raw=true">Look Collection</button>
-                <button class="btn-vintage bg-white/90 border ml-1 price-btn" data-price="Rp. 15.000 - Rp. 25.000">Price</button>
-              </div>
-            </div>
+          <!-- BUTTONS -->
+          <div class="mt-4 flex flex-col sm:flex-row gap-2">
+            <button class="btn-vintage look-btn" 
+              data-theme="Jellyfish Lagoon"
+              data-images="https://github.com/kaniratarigan3-blip/ecomm/blob/main/j1.jpg?raw=true,https://github.com/kaniratarigan3-blip/ecomm/blob/main/j2.jpg?raw=true,https://github.com/kaniratarigan3-blip/ecomm/blob/main/j3.jpg?raw=true">
+              Look Collection
+            </button>
+
+            <button class="btn-vintage bg-white/90 border price-btn"
+              data-price="Rp. 15.000. - Rp. 25.000">
+              Price
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2: Sweet Fruits -->
+    <div class="stamp p-4" id="card-fruit">
+      <div class="perforation"></div>
+      <div class="perforation right"></div>
+
+      <div class="flex flex-col sm:flex-row items-start gap-4">
+        <div class="w-full sm:w-28">
+          <div class="w-full h-40 sm:h-28 rounded-md bg-gradient-to-br from-[#FFF1EB] to-[#FFEAF0] flex items-center justify-center overflow-hidden">
+            <img src="https://github.com/kaniratarigan3-blip/ecomm/blob/main/1563779_7pdMBl1K.png?raw=true"
+            class="w-full h-full object-cover">
           </div>
         </div>
 
-        <!-- CARD 3: Dark -->
-        <div class="stamp p-4" id="card-pastel">
-          <div class="perforation"></div>
-          <div class="perforation right"></div>
-
-          <div class="flex items-start gap-4">
-            <div class="w-28 flex-shrink-0">
-              <div class="w-full h-28 rounded-md bg-gradient-to-br from-[#FBEAF2] to-[#E6D8FF] flex items-center justify-center overflow-hidden">
-                <img id="card-pastel-img" src="https://raw.githubusercontent.com/kaniratarigan3-blip/ecomm/main/download20251102082304.png" alt="pastel" class="w-full h-full object-cover">
-              </div>
+        <div class="flex-1 w-full">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+            <div>
+              <div class="label-ribbon">Theme</div>
+              <h3 class="text-lg font-bold mt-2">Sweet Fruits</h3>
             </div>
+            <div class="text-sm text-muted">Popular</div>
+          </div>
 
-            <div class="flex-1">
-              <div class="flex items-center justify-between">
-                <div>
-                  <div class="label-ribbon">Theme</div>
-                  <h3 class="text-lg font-bold mt-2">Dark Academiya</h3>
-                </div>
-                <div class="text-sm text-muted">Classic</div>
-              </div>
+          <p class="mt-2 text-sm text-muted">Design fruit-themed: strawberry beads — warm and spring vibes.</p>
 
-              <p class="mt-2 text-sm text-muted">Brown, black - dark color pallete for the beads, custom how you want.</p>
-
-              <div class="mt-4 flex gap-2">
-                <!-- fallback: no data-images -> script will use the card's small image as preview -->
-                <button class="btn-vintage look-btn" data-theme="Dark Academiya" data-images="https://github.com/kaniratarigan3-blip/ecomm/blob/main/dark%201.jpg?raw=true,https://github.com/kaniratarigan3-blip/ecomm/blob/main/dark%202.jpg?raw=true,https://github.com/kaniratarigan3-blip/ecomm/blob/main/dark%203.jpg?raw=true">Look Collection</button>
-                <button class="btn-vintage bg-white/90 border ml-1 price-btn" data-price="Rp. 15.000 - Rp. 25.000">Price</button>
-              </div>
-            </div>
+          <div class="mt-4 flex flex-col sm:flex-row gap-2">
+            <button class="btn-vintage look-btn"
+              data-theme="Sweet Fruits"
+              data-images="https://github.com/kaniratarigan3-blip/ecomm/blob/main/f1.jpg?raw=true,https://github.com/kaniratarigan3-blip/ecomm/blob/main/f2.jpg?raw=true,https://github.com/kaniratarigan3-blip/ecomm/blob/main/f3.jpg?raw=true">
+              Look Collection
+            </button>
+            <button class="btn-vintage bg-white/90 border price-btn"
+              data-price="Rp. 15.000 - Rp. 25.000">
+              Price
+            </button>
           </div>
         </div>
-      </div> <!-- grid -->
-    </section>
+      </div>
+    </div>
+
+    <!-- CARD 3: Dark Academiya -->
+    <div class="stamp p-4" id="card-pastel">
+      <div class="perforation"></div>
+      <div class="perforation right"></div>
+
+      <div class="flex flex-col sm:flex-row items-start gap-4">
+        <div class="w-full sm:w-28">
+          <div class="w-full h-40 sm:h-28 rounded-md bg-gradient-to-br from-[#FBEAF2] to-[#E6D8FF] flex items-center justify-center overflow-hidden">
+            <img src="https://raw.githubusercontent.com/kaniratarigan3-blip/ecomm/main/download20251102082304.png"
+            class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <div class="flex-1 w-full">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+            <div>
+              <div class="label-ribbon">Theme</div>
+              <h3 class="text-lg font-bold mt-2">Dark Academiya</h3>
+            </div>
+            <div class="text-sm text-muted">Classic</div>
+          </div>
+
+          <p class="mt-2 text-sm text-muted">Brown, black - dark color pallete for the beads, custom how you want.</p>
+
+          <div class="mt-4 flex flex-col sm:flex-row gap-2">
+            <button class="btn-vintage look-btn"
+              data-theme="Dark Academiya"
+              data-images="https://github.com/kaniratarigan3-blip/ecomm/blob/main/dark%201.jpg?raw=true,https://github.com/kaniratarigan3-blip/ecomm/blob/main/dark%202.jpg?raw=true,https://github.com/kaniratarigan3-blip/ecomm/blob/main/dark%203.jpg?raw=true">
+              Look Collection
+            </button>
+            <button class="btn-vintage bg-white/90 border price-btn"
+              data-price="Rp. 15.000 - Rp. 25.000">
+              Price
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <section id="acrylic-designs" class="mt-12">
   <h2 class="text-xl md:text-2xl font-semibold mb-6">Acrylic Designs — Charm Style</h2>
 
   <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
     <!-- CARD 1: Heart -->
-    <div class="relative charm-card group cursor-pointer w-36 md:w-44" data-theme="Heart Charm" data-images="https://your-image-link.com/heart1.png,https://your-image-link.com/heart2.png">
+    <div class="relative charm-card group cursor-pointer w-full max-w-[150px] md:max-w-[180px]"data-theme="Heart Charm" data-images="https://your-image-link.com/heart1.png,https://your-image-link.com/heart2.png">
       <!-- Pull tab -->
       <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-4 bg-gold-accent rounded-t-md shadow-sm group-hover:-translate-y-1 transition-transform duration-300"></div>
       <!-- Card image -->
@@ -499,7 +529,7 @@
     </div>
     
     <!-- CARD 2: Round -->
-    <div class="relative charm-card group cursor-pointer w-36 md:w-44" data-theme="Round Charm" data-images="https://your-image-link.com/round1.png,https://your-image-link.com/round2.png">
+    <div class="relative charm-card group cursor-pointer w-full max-w-[150px] md:max-w-[180px]" data-theme="Round Charm" data-images="https://your-image-link.com/round1.png,https://your-image-link.com/round2.png">
       <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-4 bg-gold-accent rounded-t-md shadow-sm group-hover:-translate-y-1 transition-transform duration-300"></div>
       <img src="https://github.com/kaniratarigan3-blip/ecomm/blob/main/Untitled_design__1_-removebg-preview.png?raw=true" alt="Round Charm" class="charm-shape w-full h-auto">
       <div class="absolute inset-0 bg-white/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-2 rounded">
@@ -512,7 +542,7 @@
     </div>
 
     <!-- CARD 3: Square -->
-    <div class="relative charm-card group cursor-pointer w-36 md:w-44" data-theme="Square Charm" data-images="https://your-image-link.com/square1.png,https://your-image-link.com/square2.png">
+    <div class="relative charm-card group cursor-pointer w-full max-w-[150px] md:max-w-[180px]" data-theme="Square Charm" data-images="https://your-image-link.com/square1.png,https://your-image-link.com/square2.png">
       <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-4 bg-gold-accent rounded-t-md shadow-sm group-hover:-translate-y-1 transition-transform duration-300"></div>
       <img src="https://github.com/kaniratarigan3-blip/ecomm/blob/main/card-removebg-preview.png?raw=true" alt="Square Charm" class="charm-shape w-full h-auto">
       <div class="absolute inset-0 bg-white/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-2 rounded">
@@ -525,7 +555,7 @@
     </div>
 
     <!-- CARD 4: Rectangle -->
-    <div class="relative charm-card group cursor-pointer w-36 md:w-44" data-theme="Rectangle Charm" data-images="https://your-image-link.com/rect1.png,https://your-image-link.com/rect2.png">
+    <div class="relative charm-card group cursor-pointer w-full max-w-[150px] md:max-w-[180px]" data-theme="Rectangle Charm" data-images="https://your-image-link.com/rect1.png,https://your-image-link.com/rect2.png">
       <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-4 bg-gold-accent rounded-t-md shadow-sm group-hover:-translate-y-1 transition-transform duration-300"></div>
       <img src="https://github.com/kaniratarigan3-blip/ecomm/blob/main/card__1_-removebg-preview.png?raw=true" alt="Rectangle Charm" class="charm-shape w-full h-auto">
       <div class="absolute inset-0 bg-white/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-2 rounded">
@@ -546,30 +576,54 @@
     Contact Me !
   </button>
 
-  <!-- Contact panel -->
-  <div id="contact-panel" class="fixed bottom-20 right-8 w-80 bg-white/95 backdrop-blur-md border border-gray-200 rounded-xl shadow-2xl p-6 transform translate-y-32 opacity-0 pointer-events-none transition-all duration-300 z-50">
-    <h3 class="text-lg font-bold mb-2">Get in Touch</h3>
-    <p class="text-sm text-muted mb-4">Feel free to reach out via any platform below:</p>
-    <ul class="flex flex-col gap-3 text-sm">
-      <li class="flex items-center gap-2">
-        <span>✉️</span>
-        <a href="mailto:kaniratarigan3@gmail.com" class="hover:underline">info@sketchandcatch.com</a>
-      </li>
-      <li class="flex items-center gap-2">
-        <span>📱</span>
-        <a href="https://wa.me/6282127150711" target="_blank" class="hover:underline">WhatsApp</a>
-      </li>
-      <li class="flex items-center gap-2">
-        <span>📸</span>
-        <a href="https://instagram.com/sketchandcatch" target="_blank" class="hover:underline">Instagram</a>
-      </li>
-      <li class="flex items-center gap-2">
-        <span>🎵</span>
-        <a href="https://tiktok.com/@sketchandcatch" target="_blank" class="hover:underline">TikTok</a>
-      </li>
-    </ul>
-  </div>
-</section>
+<!-- Contact panel -->
+<div id="contact-panel"
+  class="fixed bottom-20 right-8 w-80 bg-white/95 backdrop-blur-md border border-gray-200 
+  rounded-xl shadow-2xl p-6 transform translate-y-32 opacity-0 pointer-events-none 
+  transition-all duration-300 z-50">
+
+  <h3 class="text-lg font-semibold mb-3">Get in Touch</h3>
+
+  <p class="text-sm text-gray-500 leading-relaxed mb-4">
+    Feel free to reach out via any platform below:
+  </p>
+
+  <ul class="flex flex-col gap-4 text-sm text-gray-700">
+
+    <!-- Gmail -->
+    <li class="flex items-center gap-3">
+      <img src="https://github.com/kaniratarigan3-blip/kaniwebsite/blob/main/Gmail_.png?raw=true" class="w-6 h-6 object-contain" alt="Gmail">
+      <a href="mailto:kaniratarigan3@gmail.com" class="hover:underline">
+        kaniratarigan3@gmail.com
+      </a>
+    </li>
+
+<li class="flex items-center gap-3">
+  <img src="https://github.com/kaniratarigan3-blip/kaniwebsite/blob/main/%E2%80%94Pngtree%E2%80%94whatsapp%20icon%20whatsapp%20logo%20whatsapp_3584845.png?raw=true" 
+       class="w-8 h-8 object-contain object-center -ml-1 shrink-0" alt="WhatsApp">
+  <a href="https://wa.me/6282127150711" target="_blank" class="hover:underline">
+    WhatsApp
+  </a>
+</li>
+
+    <!-- Shopee -->
+    <li class="flex items-center gap-3">
+      <img src="https://github.com/kaniratarigan3-blip/kaniwebsite/blob/main/shopee.webp?raw=true" class="w-6 h-6 object-contain" alt="Shopee">
+      <a href="https://shopee.co.id" target="_blank" class="hover:underline">
+        Shopee
+      </a>
+    </li>
+
+    <!-- TikTok -->
+    <li class="flex items-center gap-3">
+      <img src="https://github.com/kaniratarigan3-blip/kaniwebsite/blob/main/423d605480ede6ed362557cc1bd529d3.png?raw=true" class="w-6 h-6 object-contain" alt="TikTok">
+      <a href="https://tiktok.com/@catchmaddie" target="_blank" class="hover:underline">
+        TikTok
+      </a>
+    </li>
+
+  </ul>
+</div>
 
 <!-- CARA ORDER SECTION -->
 <section id="cara-order" class="mt-16 max-w-6xl mx-auto px-4">
@@ -691,7 +745,6 @@
   });
 </script>
 
-
 <script>
   // Peek modal logic (reuse your modal)
   document.querySelectorAll('.peek-btn').forEach(btn => {
@@ -722,20 +775,24 @@
   });
 </script>
 
+<!-- little stamp gallery / FOOTER -->
+<section class="mt-10">
+  <div class="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between gap-4">
 
-    <!-- little stamp gallery -->
-    <section class="mt-10">
-      <div class="flex items-center justify-between gap-4">
-        <div class="flex items-center gap-3">
-          <div class="mini-stamp"></div>
-          <div class="mini-stamp"></div>
-          <div class="mini-stamp"></div>
-        </div>
-        <div class="text-sm text-muted">© 2025 Sketch & Catch ; Custom Keychain — Kani's Series</div>
-      </div>
-    </section>
+    <!-- Stamp icons -->
+    <div class="flex items-center gap-3">
+      <div class="mini-stamp"></div>
+      <div class="mini-stamp"></div>
+      <div class="mini-stamp"></div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-sm text-muted text-center md:text-right">
+      © 2025 Sketch & Catch ; Custom Keychain — Kani's Series
+    </div>
 
   </div>
+</section>
 
   <!-- MODAL: Soft Vintage Frame (Baby Blue Lace) -->
   <div id="modal-backdrop" class="modal-backdrop" aria-hidden="true">
